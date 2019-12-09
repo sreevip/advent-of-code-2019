@@ -2,10 +2,10 @@
 
 def part1
   file = File.open("../input/2019_day01.input")
-  masses = file.readlines.map(&:to_i)
+  masses = file.readlines
   file.close
 
-  masses.reduce(0) { |sum, mass| sum + mass / 3 - 2 }
+  masses.map { |mass| mass.to_i / 3 - 2 }.sum
 end
 
 def part2
